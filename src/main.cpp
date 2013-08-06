@@ -2083,10 +2083,10 @@ bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot) const
 
     // Check coinbase reward
 
-    if (vtx[0].GetValueOut() > (IsProofOfWork()? (GetProofOfWorkReward(0, 0, 0) - vtx[0].GetMinFee() + MIN_TX_FEE) : 0))
+    /* if (vtx[0].GetValueOut() > (IsProofOfWork()? (GetProofOfWorkReward(0, 0, 0) - vtx[0].GetMinFee() + MIN_TX_FEE) : 0))
         return DoS(50, error("CheckBlock() : coinbase reward exceeded %s > %s",
                              FormatMoney(vtx[0].GetValueOut()).c_str(),
-                   FormatMoney(IsProofOfWork()? GetProofOfWorkReward(0, 0, 0) : 0).c_str()));
+                   FormatMoney(IsProofOfWork()? GetProofOfWorkReward(0, 0, 0) : 0).c_str())); */
 
 
     // Check transactions
